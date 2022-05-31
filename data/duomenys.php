@@ -64,7 +64,7 @@ $students = [
 <div>
     <?php $keys = array_keys($students['1']);?>
     <?php //var_dump($keys); echo $keys[0]?>
-    <table class="table table-hover table-bordered table-sm"style="table-layout: fixed; margin-left: auto; margin-right: auto; width: 80%; border: solid 2px #000000;">
+    <table class="table table-hover table-bordered table-sm" style="table-layout: fixed; margin-left: auto; margin-right: auto; width: 80%; border: solid 2px #000000;">
         <thead class="table-primary">
             <tr>
                 <?php foreach($keys as $header):?>

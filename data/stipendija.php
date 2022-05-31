@@ -12,16 +12,14 @@
 <body>
 <?//= var_dump($students);?>
 <div>
-    <ol class="list-styled">
+    <ol class="list-styled" style="margin-left: 9%;">
     <?php foreach($students as $student):?>
         <?php $vidurkis=round((($student['Matematika']+$student['Anglų k.']+$student['Lietuvių k.'])/3), $precision=2);?>
         <?php $payout = 100; if ($vidurkis >= 5 and $vidurkis < 8) {$payout=80;} elseif ($vidurkis <= 5) {$payout=0;}?>
         <?php if($payout !=0)
          if ($student['Lankomumas'] > 1 and $student['Lankomumas'] < 10) {$payout /= 0.1;} elseif ($student['Lankomumas'] > 10) {$payout=0;}?>
 <!--        --><?//="|",$vidurkis,' ',$payout,' ', $student['Vardas'];?>
-
         <li><?= $student['Vardas'],' ',$student['Pavardė'],',  pažymių vidurkis: ',$vidurkis,',  praleista: ',$student['Lankomumas'],',  stipendija: ',$payout,' EUR'?></li>
-
     <?php endforeach;?>
     </ol>
 </div>
