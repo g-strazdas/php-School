@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mokykla - mokinių pažymių vidurkiai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet"
+    <link href="pazymejimas.css" rel="stylesheet"
 </head>
-<body>
+<div>
 
-<form method="post" style=" margin-left: auto; margin-right: auto; width: 80%;">
+<form method="post"  class="form-group mb-3" style=" margin-left: auto; margin-right: auto; width: 80%;">
     <div class="form-group mb-3">
         <input type="text" class="form-control" name="idNumber" placeholder="--ASMENS KODAS--" required>
     </div>
@@ -31,5 +31,68 @@
     <button class="btn btn-primary" name="save">SPAUSDINTI</button>
     </div>
 </form>
+</div>
+<div>
+<table class="tbl">
+    <thead><tr><th colspan="20">LIETUVOS RESPUBLIKA</th></tr></thead>
+    <tbody>
+    <tr>
+        <td colspan="20" style="text-align: center"><b>MOKINIO PAŽYMĖJIMAS</b></td>
+    </tr>
+    <tr>
+        <td rowspan="7"></td>
+        <td colspan="5" rowspan="7"></td>
+        <td colspan="5"><b>PAŽYMĖJIMO NR.</b></td>
+        <td colspan="9">XX 0000000</td>
+    </tr>
+    <tr>
+        <td colspan="5"><b>Pavardė:</b></td>
+        <td colspan="9"></td>
+    </tr>
+    <tr>
+        <td colspan="5"><b>Vardas:</b></td>
+        <td colspan="9"></td>
+    </tr>
+    <tr>
+        <td colspan="5"><b>Gimimo data:</b></td>
+        <td colspan="9"></td>
+    </tr>
+    <tr>
+        <td colspan="5"><b>Galioja iki:</b></td>
+        <td colspan="9"></td>
+    </tr>
+    <tr>
+        <td colspan="5"><b>Asmens kodas</b></td>
+        <td colspan="9"></td>
+    </tr>
+    <tr>
+        <td colspan="5"></td>
+        <td colspan="9"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</div>
 </body>
 </html>
