@@ -18,15 +18,15 @@ $students = [
 		'El. paštas'=>'k.backunaite@gmail.com',
 		'Matematika'=>10,
 		'Anglų k.'=>10,
-		'Lietuvių k.'=>10,
+		'Lietuvių k.'=>9,
         'Lankomumas'=>0],
 	'2'=>[
 		'Asmens kodas'=>'61001220121',
 		'Vardas'=>'Irma',
 		'Pavardė'=>'Bujauskaitė',
 		'El. paštas'=>'m.bujauskaite@gmail.com',
-		'Matematika'=>10,
-		'Anglų k.'=>10,
+		'Matematika'=>9,
+		'Anglų k.'=>7,
 		'Lietuvių k.'=>10,
         'Lankomumas'=>0],
 	'3'=>[
@@ -35,17 +35,17 @@ $students = [
 		'Pavardė'=>'Dinkevičius',
 		'El. paštas'=>'d.dinkevicius@gmail.com',
 		'Matematika'=>10,
-		'Anglų k.'=>10,
-		'Lietuvių k.'=>10,
+		'Anglų k.'=>3,
+		'Lietuvių k.'=>8,
         'Lankomumas'=>0],
 	'4'=>[
 		'Asmens kodas'=>'61003167777',
 		'Vardas'=>'Ugnė',
 		'Pavardė'=>'Dubinskaitė',
 		'El. paštas'=>'m.bujauskaite@gmail.com',
-		'Matematika'=>10,
-		'Anglų k.'=>10,
-		'Lietuvių k.'=>10,
+		'Matematika'=>5,
+		'Anglų k.'=>6,
+		'Lietuvių k.'=>5,
         'Lankomumas'=>0],
 	'5'=>[
 		'Asmens kodas'=>'37410290129',
@@ -63,24 +63,26 @@ $students = [
 <section>
 <div>
     <?php $keys = array_keys($students['1']);?>
-<!--    --><?php //var_dump($keys); echo $keys[0]?>
+    <?php //var_dump($keys); echo $keys[0]?>
     <table class="table table-hover table-bordered table-sm"style="table-layout: fixed; margin-left: auto; margin-right: auto; width: 80%; border: solid 2px #000000;">
         <thead class="table-primary">
-            <?php foreach($keys as $header):?>
-            <th><?=$header;?></th>
-            <?php endforeach;?>
-        </tr>
+            <tr>
+                <?php foreach($keys as $header):?>
+                    <th><?=$header;?></th>
+                <?php endforeach;?>
+            </tr>
         </thead>
         <tbody>
-        <?php foreach($students as $number=>$student):?><tr>
-            <?php foreach($student as $key=>$value):?>
-                <td><?=$value;?></td>
-            <?php endforeach;?>
+        <?php foreach($students as $number=>$student):?>
+            <tr>
+                <?php foreach($student as $key=>$value):?>
+                    <td><?=$value;?></td>
+                <?php endforeach;?>
             <?php endforeach;?></tr>
         </tbody>
     </table>
 </div>
-
 </section>
+
 </body>
 </html>
