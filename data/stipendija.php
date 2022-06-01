@@ -12,7 +12,7 @@
 <?php include "students.php"?>
 <?php include "nav.php"?>
 <body>
-
+<br>
 <div>
     <ol class="list-styled" style="margin-left: 9%;">
     <?php foreach($students as $student):?>
@@ -26,6 +26,7 @@
     </ol>
 </div>
 
+<div class="navi">
 <?php
 $this_page = $_SERVER['SCRIPT_NAME'];
 echo '<ul>';
@@ -36,6 +37,6 @@ foreach( $navigacija as $key=>$val ) {
 }
 echo '</ul>';
 ?>
-
+</div>
 </body>
 </html>

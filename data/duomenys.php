@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mokykla - mokinių pažymių vidurkiai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="duomenys.css" rel="stylesheet"
+    <link href="style.css" rel="stylesheet"
 </head>
 <?php include "students.php"?>
 <?php include "nav.php"?>
@@ -17,7 +17,7 @@
 <div>
     <?php $keys = array_keys($students['1']);?>
     <?php //var_dump($keys); echo $keys[0]?>
-    <table class="table table-hover table-bordered table-sm" style="margin-left: auto; margin-right: auto; width: 80%; border: solid 2px #000000;">
+    <table class="table table-hover table-bordered table-sm">
         <thead class="table-primary">
             <tr>
                 <?php foreach($keys as $header):?>
@@ -37,7 +37,7 @@
 </div>
 </section>
 </body>
-
+<div class="navi">
 <?php
 $this_page = $_SERVER['SCRIPT_NAME'];
 echo '<ul>';
@@ -48,4 +48,5 @@ echo '<ul>';
     }
     echo '</ul>' ;
     ?>
+</div>
 </html>

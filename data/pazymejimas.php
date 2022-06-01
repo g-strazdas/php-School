@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mokykla - mokinių pažymių vidurkiai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="pazymejimas.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <?php include "nav.php"?>
 <div>
+    <br>
 <form method="POST"  class="form-group mb-3" style=" margin-left: auto; margin-right: auto; width: 80%;">
     <div class="form-group mb-3">
         <input type="text" class="form-control" name="idNumber" placeholder="--ASMENS KODAS--" required>
@@ -40,11 +41,11 @@
     {
         ?>
         <div>
-            <table class="tbl">
+            <table class="table table-borderless tbl">
                 <thead><tr><th colspan="20">LIETUVOS RESPUBLIKA</th></tr></thead>
                 <tbody>
                 <tr>
-                    <td colspan="20" style="text-align: center"><b>MOKINIO PAŽYMĖJIMAS</b></td>
+                    <td class = "pavadinimas" colspan="20">MOKINIO PAŽYMĖJIMAS</td>
                 </tr>
                 <tr>
                     <td rowspan="9"></td>
@@ -66,7 +67,7 @@
                 </tr>
                 <tr>
                     <td colspan="5"><b>Galioja iki:</b></td>
-                    <td colspan="9"></td>
+                    <td colspan="9">2032.07.01</td>
                 </tr>
                 <tr>
                     <td colspan="5"><b>Asmens kodas:</b></td>
@@ -85,7 +86,7 @@
     }
     ?>
 </div>
-
+<div class="navi">
 <?php
 $this_page = $_SERVER['SCRIPT_NAME'];
 echo '<ul>';
@@ -96,5 +97,6 @@ foreach( $navigacija as $key=>$val ) {
 }
 echo '</ul>' ;
 ?>
+</div>
 </body>
 </html>

@@ -1,0 +1,18 @@
+.tbl {table-layout: fixed; width: 700px; margin-left: auto; margin-right: auto; border: solid 1px #000000; background-color: #EDEDED;}
+.tbl th {
+    padding: 0.8em; font-weight: normal;
+    text-align: center; font-size: 16px;
+    /*border: solid 2px #000000;*/
+    height: 28px; letter-spacing: 0.8em;
+}
+.tbl tr {height: 20px; font-size: 1em;}
+/*.tbl tr {border: solid 2px #000000; height: 35px; font-size: 1em;}*/
+/*.tbl td {height: 4.8vh; padding-left: 0.6%; font-size: 1em;}*/
+
+.pavadinimas {text-align: center; font-weight: bold; font-size: 22px;
+    padding-top: 0; letter-spacing: 0.2em;}
+
+.navi {padding-left:8vw;}
+
+.table-sm {
+    margin-left: auto; margin-right: auto; width: 80%; border: solid 2px;}
