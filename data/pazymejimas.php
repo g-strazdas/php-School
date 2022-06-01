@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mokykla - mokinių pažymių vidurkiai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="/data/pazymejimas.css" rel="stylesheet">
+    <link href="pazymejimas.css" rel="stylesheet">
 </head>
 <body>
-
+<?php include "nav.php"?>
 <div>
 <form method="POST"  class="form-group mb-3" style=" margin-left: auto; margin-right: auto; width: 80%;">
     <div class="form-group mb-3">
@@ -85,13 +85,16 @@
     }
     ?>
 </div>
+
 <?php
-////$this_page = "about";
-//echo $this_page;
-//include '/data/nav_bar.php' ;
+$this_page = $_SERVER['SCRIPT_NAME'];
+echo '<ul>';
+foreach( $navigacija as $key=>$val ) {
+    echo '<li><a href="'  . $val . '"';
+    if( $val == $this_page) echo ' class="active"';
+    echo '>' . $key  . '</a></li>' . PHP_EOL ;
+}
+echo '</ul>' ;
 ?>
-
-
-<br>
 </body>
 </html>
