@@ -7,57 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mokykla - mokinių pažymių vidurkiai</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="./data/duomenys.css" rel="stylesheet"
+    <link href="duomenys.css" rel="stylesheet"
 </head>
-<?php
-$students = [
-	'1'=>[
-		'Asmens kodas'=>'61010290120',
-		'Vardas'=>'Kamilė',
-		'Pavardė'=>'Backūnaitė',
-		'El. paštas'=>'k.backunaite@gmail.com',
-		'Matematika'=>10,
-		'Anglų k.'=>10,
-		'Lietuvių k.'=>9,
-        'Lankomumas'=>0],
-	'2'=>[
-		'Asmens kodas'=>'61001220121',
-		'Vardas'=>'Irma',
-		'Pavardė'=>'Bujauskaitė',
-		'El. paštas'=>'m.bujauskaite@gmail.com',
-		'Matematika'=>9,
-		'Anglų k.'=>7,
-		'Lietuvių k.'=>10,
-        'Lankomumas'=>0],
-	'3'=>[
-		'Asmens kodas'=>'61003167777',
-		'Vardas'=>'Danas',
-		'Pavardė'=>'Dinkevičius',
-		'El. paštas'=>'d.dinkevicius@gmail.com',
-		'Matematika'=>10,
-		'Anglų k.'=>3,
-		'Lietuvių k.'=>8,
-        'Lankomumas'=>0],
-	'4'=>[
-		'Asmens kodas'=>'61003167777',
-		'Vardas'=>'Ugnė',
-		'Pavardė'=>'Dubinskaitė',
-		'El. paštas'=>'m.bujauskaite@gmail.com',
-		'Matematika'=>5,
-		'Anglų k.'=>6,
-		'Lietuvių k.'=>5,
-        'Lankomumas'=>0],
-	'5'=>[
-		'Asmens kodas'=>'37410290129',
-		'Vardas'=>'Giedrius',
-		'Pavardė'=>'Strazdas',
-		'El. paštas'=>'g.strazdas@yahoo.com',
-		'Matematika'=>2,
-		'Anglų k.'=>2,
-		'Lietuvių k.'=>2,
-        'Lankomumas'=>10]
-			];
-?>
+<?php include "students.php"?>
+<?php include "nav.php"?>
 <body>
 <h3 style="text-align: center">Mokyklos mokinių sąrašas</h3>
 <section>
@@ -83,6 +36,16 @@ $students = [
     </table>
 </div>
 </section>
-
 </body>
+
+<?php
+$this_page = $_SERVER['SCRIPT_NAME'];
+echo '<ul>';
+    foreach( $navigacija as $key=>$val ) {
+    echo '<li><a href="'  . $val . '"';
+        if( $val == $this_page) echo ' class="active"';
+        echo '>' . $key  . '</a></li>' . PHP_EOL ;
+    }
+    echo '</ul>' ;
+    ?>
 </html>
