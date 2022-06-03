@@ -9,16 +9,18 @@
     <link href="/src/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/data/style.css" rel="stylesheet">
 </head>
-<?php include "students.php"?>
-<?php include "nav.php"?>
+
 <body>
-<h3 style="text-align: center">Mokyklos mokinių sąrašas</h3>
-<section>
-<div>
-    <?php $keys = array_keys($students['1']);?>
-    <?php //var_dump($keys); echo $keys[0]?>
+
+<div class="container-fluid p-0 bg-info">
+     <div class="row">
+         <h2 class="text-center text-white p-2">Mokinių duomenys</h2>
+     </div>
+    <?php include "students.php";  include "nav.php"; $keys = array_keys($students['1']);?>
+
+<div class="container-fluid bg-info">
     <table class="table table-hover table-bordered table-sm">
-        <thead class="table-primary">
+        <thead class="table-primary text-center">
             <tr>
                 <?php foreach($keys as $header):?>
                     <th><?=$header;?></th>
@@ -27,7 +29,7 @@
         </thead>
         <tbody>
         <?php foreach($students as $number=>$student):?>
-            <tr>
+            <tr class="table-light">
                 <?php foreach($student as $key=>$value):?>
                     <td><?=$value;?></td>
                 <?php endforeach;?>
@@ -35,18 +37,18 @@
         </tbody>
     </table>
 </div>
-</section>
-</body>
-<div class="navi">
-<?php
-$this_page = $_SERVER['SCRIPT_NAME'];
-echo '<ul>';
-    foreach( $navigacija as $key=>$val ) {
-    echo '<li><a href="'  . $val . '"';
-        if( $val == $this_page) echo ' class="active"';
-        echo '>' . $key  . '</a></li>' . PHP_EOL ;
-    }
-    echo '</ul>' ;
-    ?>
+
+<div class="container-fluid p-0">
+    <div class="d-grid d-md-block text-center bg-warning">
+        <?php
+        require 'nav.php';
+        $this_page = $_SERVER['SCRIPT_NAME'];
+        foreach($navigacija as $key=>$val)
+            if (strpos($val, $this_page) === False){echo '<a class="btn btn-primary btn-sm m-3" href="'.$val.'" type='.'"button">'.$key.'</a>';}
+        ?>
+    </div>
 </div>
+
+</body>
+
 </html>

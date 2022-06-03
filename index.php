@@ -10,8 +10,8 @@
 </head>
 <body>
 
-    <div class="container-fluid">
-        <div class="d-grid d-md-block mt-0 text-center bg-warning">
+    <div class="container-fluid p-0">
+        <div class="d-grid d-md-block text-center bg-warning">
 <?php
     require 'data/nav.php';
     $this_page = $_SERVER['SCRIPT_NAME'];
@@ -19,10 +19,9 @@
         if (strpos($val, $this_page) === False){echo '<a class="btn btn-primary btn-sm m-3" href="'.$val.'" type='.'"button">'.$key.'</a>';}
     ?>
         </div>
-    <div class="row">
-        <img src="./src/img/img236.png" class="img-fluid vh-100" alt="...">
-    </div>
-
+        <div class="row">
+            <img src="./src/img/img236.png" class="img-fluid vh-100" alt="...">
+        </div>
     </div>
 </body>
 </html>
