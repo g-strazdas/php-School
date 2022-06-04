@@ -37,7 +37,6 @@
                     echo '<td class = "text-left px-3">'.$value.'</td>';
                 }
                     ?>
-<!--                    <td>--><?//=$value;?><!--</td>-->
                 <?php endforeach;?>
             <?php endforeach;?></tr>
         </tbody>
