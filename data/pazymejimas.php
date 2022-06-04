@@ -9,39 +9,49 @@
     <link href="/src/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/data/style.css" rel="stylesheet">
 </head>
+
 <body>
-<?php include "nav.php"?>
-<div>
-    <br>
-<form method="POST"  class="form-group mb-3" style=" margin-left: auto; margin-right: auto; width: 80%;">
-    <div class="form-group mb-3">
-        <input type="text" class="form-control" name="idNumber" placeholder="--ASMENS KODAS--" required>
+
+<div class="container-fluid p-0 bg-info">
+    <div class="row">
+        <h2 class="text-center text-white p-2">Mokinio pažymėjimo spausdinimas</h2>
     </div>
-    <div class="form-group mb-3">
-        <input type="text" class="form-control" name="firstName" placeholder="--VARDAS--" required>
-    </div>
-    <div class="form-group mb-3">
-        <input type="text" class="form-control" name="lastName" placeholder="--PAVARDĖ--" required>
-    </div>
-    <div class="form-group mb-3">
-        <input type="text" class="form-control" name="courseNr" placeholder="--KLASĖ--" required>
-    </div>
-    <div class="form-group mb-3">
-        <input type="text" class="form-control" name="schoolName" placeholder="--MOKYKLOS PAVADINIMAS--" required>
-    </div>
-    <div class="form-group mb-3">
-    <button class="btn btn-primary" name="submit">SPAUSDINTI</button>
-    </div>
-</form>
+    <?php include "students.php";  include "nav.php";?>
+
 </div>
+<div class="container-fluid p-0 bg-info">
+    <form method="POST"  class="form-group bg-info w-50" style=" margin-left: auto; margin-right: auto;">
+        <div class="form-group mb-3">
+            <input type="text" class="form-control bg-white p-1" name="idNumber" placeholder="--ASMENS KODAS--" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control bg-white p-1" name="firstName" placeholder="--VARDAS--" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control bg-white p-1" name="lastName" placeholder="--PAVARDĖ--" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control bg-white p-1" name="courseNr" placeholder="--KLASĖ--" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control bg-white p-1" name="schoolName" placeholder="--MOKYKLOS PAVADINIMAS--" required>
+        </div>
+        <div class="form-group mb-3">
+            <button class="btn btn-danger p-1 mb-3" name="submit">SPAUSDINTI</button>
+        </div>
+    </form>
+    <div class="row bg-info py-0"></div>
+    </div>
+
 
 <div>
     <?php
     if(isset($_POST['submit']))
     {
         ?>
-        <div>
-            <table class="table table-borderless tbl">
+        <div class="container-fluid p-0 bg-info">
+
+            <table class="table table-borderless tbl my-0">
                 <thead><tr><th colspan="20">LIETUVOS RESPUBLIKA</th></tr></thead>
                 <tbody>
                 <tr>
@@ -81,22 +91,21 @@
                 </tr>
                 </tbody>
             </table>
+            <div class="row bg-info py-2"></div>
         </div>
         <?php
     }
     ?>
 </div>
-<div class="navi">
-<?php
-$this_page = $_SERVER['SCRIPT_NAME'];
-echo '<ul>';
-foreach( $navigacija as $key=>$val ) {
-    echo '<li><a href="'  . $val . '"';
-    if( $val == $this_page) echo ' class="active"';
-    echo '>' . $key  . '</a></li>' . PHP_EOL ;
-}
-echo '</ul>' ;
-?>
+<div class="container-fluid p-0">
+    <div class="d-grid d-md-block text-center bg-warning">
+        <?php
+        require 'nav.php';
+        $this_page = $_SERVER['SCRIPT_NAME'];
+        foreach($navigacija as $key=>$val)
+            if (strpos($val, $this_page) === False){echo '<a class="btn btn-primary btn-sm m-3" href="'.$val.'" type='.'"button">'.$key.'</a>';}
+        ?>
+    </div>
 </div>
 </body>
 </html>
