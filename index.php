@@ -20,7 +20,7 @@
     ?>
         </div>
         <div class="row">
-            <img src="./src/img/img236.png" class="img-fluid vh-100" alt="...">
+            <img src="./src/img/img236.png" class="img-fluid w-100" alt="...">
         </div>
     </div>
 </body>
