@@ -19,19 +19,25 @@
     <?php include "students.php";  include "nav.php"; $keys = array_keys($students['1']);?>
 
 <div class="container-fluid bg-info">
-    <table class="table table-hover table-bordered table-sm">
-        <thead class="table-primary text-center">
+    <table class="table table-hover table-bordered table-sm table-striped">
+        <thead class="table-primary text-center align-middle">
             <tr>
                 <?php foreach($keys as $header):?>
                     <th><?=$header;?></th>
                 <?php endforeach;?>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="table-group-divider">
         <?php foreach($students as $number=>$student):?>
             <tr class="table-light">
-                <?php foreach($student as $key=>$value):?>
-                    <td><?=$value;?></td>
+                <?php foreach($student as $key=>$value):
+                if($key != 'Vardas' and $key != 'Pavardė'){
+                    echo '<td class = "text-center">'.$value.'</td>';
+                } else {
+                    echo '<td class = "text-left px-3">'.$value.'</td>';
+                }
+                    ?>
+<!--                    <td>--><?//=$value;?><!--</td>-->
                 <?php endforeach;?>
             <?php endforeach;?></tr>
         </tbody>
